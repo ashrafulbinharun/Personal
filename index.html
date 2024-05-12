@@ -41,7 +41,7 @@
     <div class="wrapper" data-scroll-container>
         <header data-scroll-section>
             <nav class="navbar navbar-expand-lg" data-scroll>
-                <div class="container-fluid menu position-fixed">
+                <div class="container-fluid menu position-fixed rounded-bottom-3">
                     <a class="navbar-brand" href="./index.html">Navbar</a>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ms-auto d-flex gap-4">
@@ -108,26 +108,80 @@
         </header>
 
         <main>
-            <section>
-
+            <!-- Banner Section -->
+            <section style="margin-top: 70px;">
+                <h1 class="text-center">Banner Image</h1>
             </section>
 
-            <section>
-
-                <div class="container" data-scroll-section style="margin-top: 70px;">
-                    <div class="row" data-scroll>
-                        <div class="col-lg-8 offset-lg-4">
-                            <img src="./assets/images/ashraful_karim.png" width="150px" alt="">
-
+            <section class="container px-4">
+                <div class="row">
+                    <!-- Profile Card -->
+                    <article class="col-12 col-md-4">
+                        <div>
+                            <h1 style="font-size: 4rem;">
+                                Profile card
+                            </h1>
                         </div>
-                    </div>
-                </div>
+                    </article>
 
+                    <!-- Counter -->
+                    <article class="col-md-8" data-scroll-section>
+                        <div data-scroll>
+                            <h1>Counter</h1>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore iure odio blanditiis
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Story -->
+                    <article class="col-12 col-md-8 offset-md-4" data-scroll-section>
+                        <div data-scroll>
+                            <h1>Story</h1>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore iure odio blanditiis
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Service -->
+                    <article class="col-12 col-md-8 offset-md-4" data-scroll-section>
+                        <div data-scroll>
+                            <h1>Service</h1>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore iure odio blanditiis
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Testimonial -->
+                    <article class="col-12 col-md-8 offset-md-4" data-scroll-section>
+                        <div data-scroll>
+                            <h1>Testimonial</h1>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore iure odio blanditiis
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
             </section>
         </main>
 
         <footer>
-            <div></div>
+            <div class="container px-4" data-scroll-section>
+                <div class="row" data-scroll>
+                    <div
+                        class="col-12 col-md-8 offset-md-4 footer d-flex align-items-center gap-2 text-uppercase rounded-3">
+                        <p class="m-0">© 2024 All Rights Reserved.</p>
+                        <p class="m-0">Designed By: <a class="footer-link"
+                                href="https://www.linkedin.com/in/ashraful-karim/">md
+                                ashraful
+                                karim</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
         </footer>
     </div>
 

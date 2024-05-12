@@ -4,10 +4,11 @@
 /* Normalizer */
 @import url(./normalize.css);
 :root {
+  --bg: #00283a;
   --primary: #02162b;
   --secondary: #afb42b;
   --text_primary: #f2f2f2;
-  --text-secondary: rgba(204, 205, 207, 0.7);
+  --text_secondary: rgba(204, 205, 207, 0.7);
 }
 
 /* Mobile Design */
@@ -38,13 +39,12 @@ h6 {
   background-color: var(--secondary);
   opacity: 1;
 }
+
 /* Header & Navigation Menu */
 .menu {
-  background-color: #00283a;
+  background-color: var(--bg);
   color: var(--text_primary);
-  padding: 0.8rem;
-  border-bottom-left-radius: 0.6rem;
-  border-bottom-right-radius: 0.6rem;
+  padding: 0.875rem;
   top: 0;
   left: 0;
   z-index: 999;
@@ -79,7 +79,7 @@ h6 {
 }
 .offcanvas {
   max-height: 300px;
-  background-color: #00283a;
+  background-color: var(--bg);
   border-bottom-left-radius: 0.6rem;
   border-bottom-right-radius: 0.6rem;
 }
@@ -101,8 +101,23 @@ h6 {
 
 /* Hero Section */
 
+/* Footer */
+.footer {
+  background-color: var(--bg);
+  color: var(--text_secondary);
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.5rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.125rem;
+}
+.footer-link {
+  color: var(--secondary);
+}
+
 /* Tablet Design */
 @media (min-width: 640px) {
+  /* Header & Navigation Menu */
   .menu {
     padding: 1rem 3rem;
   }
@@ -113,10 +128,13 @@ h6 {
   .mobile-menu {
     left: 40%;
   }
+
+  /* Hero Section */
 }
 
 /* Desktop Design */
 @media (min-width: 1024px) {
+  /* Header & Navigation Menu */
   .wrapper {
     padding: 0 0.5rem;
   }
@@ -129,5 +147,14 @@ h6 {
   .toggle,
   .offcanvas {
     display: none;
+  }
+
+  /* Hero Section */
+
+  /* Footer */
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2.5rem;
   }
 }
