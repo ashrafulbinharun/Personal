@@ -1,0 +1,133 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Sofia+Sans+Semi+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap');
+
+/* Normalizer */
+@import url(./normalize.css);
+:root {
+  --primary: #02162b;
+  --secondary: #afb42b;
+  --text_primary: #f2f2f2;
+  --text-secondary: rgba(204, 205, 207, 0.7);
+}
+
+/* Mobile Design */
+body {
+  font-family: 'Sofia Sans Semi Condensed', sans-serif;
+  background-color: var(--primary);
+  color: var(--text_primary);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Lato', sans-serif;
+}
+/* Locomotive Scroll */
+.c-scrollbar {
+  width: 10px;
+  top: 80px;
+  bottom: 10px;
+  height: calc(100vh - 100px);
+}
+.c-scrollbar_thumb {
+  width: 4px;
+  right: 1px;
+  border-radius: 10px;
+  background-color: var(--secondary);
+  opacity: 1;
+}
+/* Header & Navigation Menu */
+.menu {
+  background-color: #00283a;
+  color: var(--text_primary);
+  padding: 0.8rem;
+  border-bottom-left-radius: 0.6rem;
+  border-bottom-right-radius: 0.6rem;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 60%);
+}
+.nav-link {
+  color: var(--text_primary);
+}
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--secondary);
+}
+.nav-link.active {
+  color: var(--secondary) !important;
+}
+.my-btn {
+  background-color: var(--secondary);
+  padding: 0.4rem 1.5rem !important;
+  transition: all 0.3s ease-in-out;
+}
+.my-btn:hover {
+  color: var(--text_primary);
+  transform: scale(1.04);
+}
+.my-btn:focus {
+  color: var(--text_primary);
+  outline: 2px solid var(--secondary);
+  outline-offset: 3px;
+}
+.fa-arrow-down {
+  font-size: 0.8rem;
+}
+.offcanvas {
+  max-height: 300px;
+  background-color: #00283a;
+  border-bottom-left-radius: 0.6rem;
+  border-bottom-right-radius: 0.6rem;
+}
+.offcanvas-header {
+  align-items: end;
+  justify-content: end;
+}
+.fa-bars-staggered {
+  font-size: 1.5rem;
+}
+.fa-xmark {
+  color: var(--text_primary);
+  font-size: 1.5rem;
+}
+.mobile-menu {
+  top: 0;
+  left: 30%;
+}
+
+/* Hero Section */
+
+/* Tablet Design */
+@media (min-width: 640px) {
+  .menu {
+    padding: 1rem 3rem;
+  }
+  .offcanvas.show:not(.hiding),
+  .offcanvas.showing {
+    width: 100%;
+  }
+  .mobile-menu {
+    left: 40%;
+  }
+}
+
+/* Desktop Design */
+@media (min-width: 1024px) {
+  .wrapper {
+    padding: 0 0.5rem;
+  }
+  .menu {
+    padding: 1rem 12rem;
+  }
+  .nav-link {
+    font-size: 1.2rem;
+  }
+  .toggle,
+  .offcanvas {
+    display: none;
+  }
+}
