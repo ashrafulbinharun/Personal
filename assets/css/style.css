@@ -40,6 +40,12 @@ h6 {
   opacity: 1;
 }
 
+/* Swiper */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
 /* Header & Navigation Menu */
 .menu {
   background-color: var(--bg);
@@ -49,6 +55,9 @@ h6 {
   left: 0;
   z-index: 999;
   box-shadow: 0 2px 4px 0 rgb(0 0 0 / 60%);
+}
+.logo_image {
+  max-width: 100px;
 }
 .nav-link {
   color: var(--text_primary);
@@ -80,12 +89,6 @@ h6 {
 .offcanvas {
   max-height: 300px;
   background-color: var(--bg);
-  border-bottom-left-radius: 0.6rem;
-  border-bottom-right-radius: 0.6rem;
-}
-.offcanvas-header {
-  align-items: end;
-  justify-content: end;
 }
 .fa-bars-staggered {
   font-size: 1.5rem;
@@ -99,7 +102,34 @@ h6 {
   left: 30%;
 }
 
-/* Hero Section */
+/* Banner Section */
+.banner_image {
+  margin-top: 3.6rem;
+  filter: brightness(85%);
+}
+.banner_box {
+  top: 20%;
+}
+.banner_title {
+  font-weight: 900;
+  font-size: 1.5rem;
+  letter-spacing: 0.125rem;
+}
+.banner_button {
+  padding: 0.2rem 2rem;
+  color: var(--text_primary);
+  font-weight: 600;
+  letter-spacing: 0.125rem;
+  border: 0.125rem solid var(--text_primary);
+  transition: all 0.3s ease-in-out;
+}
+.banner_button:hover {
+  transform: scale(1.04);
+}
+/* Profile */
+.profile {
+  z-index: 1;
+}
 
 /* Footer */
 .footer {
@@ -129,7 +159,16 @@ h6 {
     left: 40%;
   }
 
-  /* Hero Section */
+  /* Banner Section */
+  .banner_image {
+    max-height: 80dvh;
+  }
+  .banner_box {
+    top: 35%;
+  }
+  .banner_title {
+    font-size: 2.8rem;
+  }
 }
 
 /* Desktop Design */
@@ -149,7 +188,14 @@ h6 {
     display: none;
   }
 
-  /* Hero Section */
+  /* Banner Section */
+  .banner_title {
+    font-size: 4rem;
+  }
+  .banner_button {
+    padding: 0.5rem 4rem;
+    font-size: 1.2rem;
+  }
 
   /* Footer */
   .footer {

@@ -16,7 +16,7 @@
     <meta property="og:title" content="Ashraful Karim">
     <meta property="og:description"
         content="I build websites you'll love! Skilled developer crafting beautiful & functional experiences with PHP, JavaScript, Laravel, Bootstrap, Tailwind, semantic HTML & vanilla CSS. Clean code & user-friendliness are my priorities. Let's create something amazing!">
-    <meta property="og:image" content="https://your-portfolio-website.com/path/to/your-profile-image.jpg">
+    <meta property="og:image" content="https://ashrafulbinharun.com/images/ogimg.jpg">
 
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary">
@@ -24,25 +24,29 @@
     <meta name="twitter:title" content="Ashraful Karim">
     <meta name="twitter:description"
         content="I build websites you'll love! Skilled developer crafting beautiful & functional experiences with PHP, JavaScript, Laravel, Bootstrap, Tailwind, semantic HTML & vanilla CSS. Clean code & user-friendliness are my priorities. Let's create something amazing!">
-    <!-- <meta name="twitter:image" content=""> -->
+    <meta name="twitter:image" content="https://ashrafulbinharun.com/images/twitterimage.jpg">
 
-    <link rel="icon" sizes="32x32" href="#" type="image/x-icon">
+    <link rel="icon" sizes="32x32" href="./assets/images/favicon.ico" type="image/x-icon">
     <!-- bootstrap -->
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
     <!-- font awesome -->
     <link rel="stylesheet" href="./assets/fontawesome_icons/all.css">
     <!-- locomotive scroll -->
     <link rel="stylesheet" href="./assets/css/locomotive-scroll.css">
+    <!-- swiper js -->
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
     <!-- custom css -->
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
     <div class="wrapper" data-scroll-container>
-        <header data-scroll-section>
-            <nav class="navbar navbar-expand-lg" data-scroll>
+        <header>
+            <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid menu position-fixed rounded-bottom-3">
-                    <a class="navbar-brand" href="./index.html">Navbar</a>
+                    <a class="navbar-brand" href="./index.html">
+                        <img class="logo_image" src="./assets/images/ashraful_karim.png" alt="Logo">
+                    </a>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ms-auto d-flex gap-4">
                             <li class="nav-item">
@@ -65,19 +69,19 @@
                             </li>
                         </ul>
                     </div>
+
                     <!-- offcanvas Start -->
-                    <button class="toggle border-0 bg-transparent" data-bs-target="#offcanvas"
+                    <button class="toggle border-0 bg-transparent me-3" data-bs-target="#offcanvas"
                         data-bs-toggle="offcanvas" role="button">
                         <i class="fa-solid fa-bars-staggered"></i>
                     </button>
 
-                    <div class="offcanvas offcanvas-end" id="offcanvas">
-                        <div class="offcanvas-header">
+                    <div class="offcanvas offcanvas-end rounded-bottom-3" id="offcanvas">
+                        <div class="offcanvas-header align-items-end justify-content-end">
                             <button class="cross border-0 bg-transparent" type="button" data-bs-dismiss="offcanvas">
                                 <i class="fa-solid fa-xmark"></i>
                             </button>
                         </div>
-
                         <div class="offcanvas-body">
                             <ul class="navbar-nav text-center position-absolute mt-5 mobile-menu">
                                 <li class="nav-item">
@@ -109,14 +113,32 @@
 
         <main>
             <!-- Banner Section -->
-            <section style="margin-top: 70px;">
-                <h1 class="text-center">Banner Image</h1>
+            <section data-scroll-section>
+                <div class="container-fluid px-0 px-md-4" data-scroll>
+                    <div class="row">
+                        <div class="col-12 col-md-12 rounded-3">
+                            <img class="object-fit-cover banner_image w-100 rounded-bottom-3"
+                                src="./assets/images/banner_home.jpg" alt="Banner Image">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-md-8 offset-md-4 position-absolute banner_box">
+                            <div
+                                class="d-flex flex-column justify-content-center align-items-center align-items-md-start">
+                                <h2 class="banner_title mb-3 mb-md-4 mb-lg-5 text-center text-md-start">Discover my
+                                    <span class="d-block">creative space</span>
+                                </h2>
+                                <a href="#" class="banner_button bg-transparent rounded-5">Home</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <section class="container px-4">
                 <div class="row">
                     <!-- Profile Card -->
-                    <article class="col-12 col-md-4">
+                    <article class="col-12 col-md-4 position-fixed profile">
                         <div>
                             <h1 style="font-size: 4rem;">
                                 Profile card
@@ -125,7 +147,7 @@
                     </article>
 
                     <!-- Counter -->
-                    <article class="col-md-8" data-scroll-section>
+                    <article class="col-12 col-md-8 offset-md-4" data-scroll-section>
                         <div data-scroll>
                             <h1>Counter</h1>
                             <p>
@@ -168,9 +190,9 @@
             </section>
         </main>
 
-        <footer>
-            <div class="container px-4" data-scroll-section>
-                <div class="row" data-scroll>
+        <footer data-scroll-section>
+            <div class="container px-4" data-scroll>
+                <div class="row">
                     <div
                         class="col-12 col-md-8 offset-md-4 footer d-flex align-items-center gap-2 text-uppercase rounded-3">
                         <p class="m-0">© 2024 All Rights Reserved.</p>
@@ -187,6 +209,7 @@
 
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/locomotive-scroll.min.js"></script>
+    <script src="./assets/js/swiper-bundle.min.js"></script>
     <script src="./assets/js/main.js"></script>
 </body>
 
