@@ -2,13 +2,148 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Sofia+Sans+Semi+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap');
 
 /* Normalizer */
-@import url(./normalize.css);
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+body {
+  line-height: 1.5;
+}
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  max-width: 100%;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Remove built-in form typography styles */
+:where(input, button, textarea, select),
+:where(input[type='file'])::-webkit-file-upload-button {
+  color: inherit;
+  font: inherit;
+  font-size: inherit;
+  letter-spacing: inherit;
+  word-spacing: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Make it clear that interactive elements are interactive */
+:where(
+    a[href],
+    area,
+    button,
+    input,
+    label[for],
+    select,
+    summary,
+    textarea,
+    [tabindex]:not([tabindex*='-'])
+  ) {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+:where(input[type='file']) {
+  cursor: auto;
+}
+:where(input[type='file'])::-webkit-file-upload-button,
+:where(input[type='file'])::file-selector-button {
+  cursor: pointer;
+}
+
+/* Textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Position list marker inside */
+:where(ul, ol) {
+  list-style-position: inside;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+:where(ul, ol)[role='list'] {
+  list-style: none;
+}
+
+/* Make sure users can't select button text */
+:where(
+    button,
+    button[type],
+    input[type='button'],
+    input[type='submit'],
+    input[type='reset']
+  ),
+:where(input[type='file'])::-webkit-file-upload-button,
+:where(input[type='file'])::file-selector-button {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  user-select: none;
+  text-align: center;
+}
+
+/* Disabled cursor for disabled buttons */
+:where(
+    button,
+    button[type],
+    input[type='button'],
+    input[type='submit'],
+    input[type='reset']
+  )[disabled] {
+  cursor: not-allowed;
+}
+
+:where(svg) {
+  stroke: none;
+  fill: currentColor;
+}
+
+/* SVG's without a fill attribute */
+:where(svg):where(:not([fill])) {
+  /* Remove fill and set stroke color to the inherited font color */
+  stroke: currentColor;
+  fill: none;
+  /* Rounded stroke */
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 :root {
   --bg: #00283a;
   --primary: #02162b;
   --secondary: #afb42b;
   --text_primary: #f2f2f2;
   --text_secondary: rgba(204, 205, 207, 0.7);
+  --word_space: 0.125rem;
+  --duration: all 0.3s ease-in-out;
 }
 
 /* Mobile Design */
@@ -27,10 +162,11 @@ h6 {
 }
 /* Locomotive Scroll */
 .c-scrollbar {
-  width: 10px;
+  position: fixed;
+  width: 5px;
   top: 80px;
   bottom: 10px;
-  height: calc(100vh - 100px);
+  height: auto;
 }
 .c-scrollbar_thumb {
   width: 4px;
@@ -71,8 +207,9 @@ h6 {
 }
 .my-btn {
   background-color: var(--secondary);
-  padding: 0.4rem 1.5rem !important;
-  transition: all 0.3s ease-in-out;
+  color: var(--text_primary);
+  padding: 0.5rem 1.5rem !important;
+  transition: var(--duration);
 }
 .my-btn:hover {
   color: var(--text_primary);
@@ -113,7 +250,7 @@ h6 {
 .banner_title {
   font-weight: 900;
   font-size: 1.5rem;
-  letter-spacing: 0.125rem;
+  letter-spacing: var(--word_space);
 }
 .banner_button {
   padding: 0.2rem 2rem;
@@ -121,14 +258,52 @@ h6 {
   font-weight: 600;
   letter-spacing: 0.125rem;
   border: 0.125rem solid var(--text_primary);
-  transition: all 0.3s ease-in-out;
+  transition: var(--duration);
 }
 .banner_button:hover {
   transform: scale(1.04);
 }
+.content {
+  margin-top: -2rem;
+}
 /* Profile */
 .profile {
+  position: absolute;
   z-index: 1;
+  width: 88%;
+  max-width: 350px;
+  background-color: var(--bg);
+  letter-spacing: var(--word_space);
+}
+.avatar {
+  max-width: 150px;
+}
+.title {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.divider {
+  border-bottom: dotted 2px rgba(225, 225, 235, 0.25);
+}
+.auto_type {
+  font-size: 0.875rem;
+}
+.profile_links {
+  color: var(--text_primary);
+  font-size: 1.25rem;
+  transition: var(--duration);
+}
+.profile_links:hover {
+  color: var(--secondary);
+  transform: scale(1.5);
+}
+.profile_info {
+  font-size: 0.875rem;
+}
+
+/* Counter */
+.counter_box {
+  margin-top: 38rem;
 }
 
 /* Footer */
@@ -146,7 +321,13 @@ h6 {
 }
 
 /* Tablet Design */
+
 @media (min-width: 640px) {
+  /* Locomotive Scroll */
+  .c-scrollbar {
+    top: 100px;
+    bottom: 20px;
+  }
   /* Header & Navigation Menu */
   .menu {
     padding: 1rem 3rem;
@@ -164,15 +345,33 @@ h6 {
     max-height: 80dvh;
   }
   .banner_box {
-    top: 35%;
+    top: 28%;
   }
   .banner_title {
     font-size: 2.8rem;
   }
+  .content {
+    margin-top: -6rem;
+  }
+
+  /* Profile */
+  .profile {
+    max-width: 492px;
+  }
+  .title {
+    font-size: 1.25rem;
+  }
+
+  /* Counter */
 }
 
 /* Desktop Design */
 @media (min-width: 1024px) {
+  /* Locomotive Scroll */
+  .c-scrollbar {
+    top: 120px;
+    bottom: 30px;
+  }
   /* Header & Navigation Menu */
   .wrapper {
     padding: 0 0.5rem;
@@ -195,6 +394,18 @@ h6 {
   .banner_button {
     padding: 0.5rem 4rem;
     font-size: 1.2rem;
+  }
+
+  /* Profile */
+  .profile {
+    top: 12.5%;
+    max-width: 400px;
+    height: calc(100vh - 100px);
+  }
+
+  /* Counter */
+  .counter_box {
+    margin-top: 0;
   }
 
   /* Footer */
