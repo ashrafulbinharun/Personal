@@ -43,20 +43,20 @@
     <div class="wrapper" data-scroll-container>
         <header>
             <nav class="navbar navbar-expand-lg">
-                <div class="container-fluid menu position-fixed rounded-bottom-3">
+                <div class="container-fluid menu content_box position-fixed rounded-bottom-3">
                     <a class="navbar-brand" href="./index.html">
                         <img class="logo_image" src="./assets/images/ashraful_karim.png" alt="Logo">
                     </a>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ms-auto d-flex gap-4">
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+                                <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" aria-current="page" href="./projects.html">Projects</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="./about.html">About</a>
+                                <a class="nav-link" aria-current="page" href="./about.html">About</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" aria-current="page" href="./contact.html">Contact</a>
@@ -118,17 +118,20 @@
                     <div class="row">
                         <div class="col-12 col-md-12 rounded-3">
                             <img class="object-fit-cover banner_image w-100 rounded-bottom-3"
-                                src="./assets/images/banner_about.jpg" alt="Banner Image">
+                                src="./assets/images/banner_home.jpg" alt="Banner Image">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-12 col-md-8 offset-md-4 position-absolute banner_box">
                             <div
-                                class="d-flex flex-column justify-content-center align-items-center align-items-md-start ms-md-5 ms-lg-4">
+                                class="d-flex flex-column justify-content-center align-items-center align-items-md-start ms-md-5">
                                 <h2 class="banner_title mb-3 mb-md-4 mb-lg-5 text-center text-md-start">Discover my
                                     <span class="d-block">creative space</span>
                                 </h2>
-                                <a href="./index.html" class="banner_button bg-transparent rounded-5">Home</a>
+                                <button type="button"
+                                    class="banner_button bg-transparent position-relative overflow-hidden d-inline-block rounded-5">
+                                    Home
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -136,10 +139,10 @@
             </section>
 
             <section class="container px-4 content">
+                <!-- Profile Card -->
                 <div class="row">
-                    <!-- Profile Card -->
                     <article class="col-12 col-md-4">
-                        <div class="profile px-5 py-5 p-3 rounded-4">
+                        <div class="profile content_box px-5 py-5 p-3 rounded-4">
                             <div class="d-flex justify-content-center align-items-center mb-3">
                                 <img class="avatar object-fit-cover rounded-circle mb-3"
                                     src="./assets/images/avatar.jpg" alt="Ashraful Karim Avatar">
@@ -172,12 +175,12 @@
                                 <div class="text-uppercase">
                                     <p class="mb-2">residence:</p>
                                     <p class="mb-2">city:</p>
-                                    <p class="mb-2">age:</p>
+                                    <p class="mb-0">age:</p>
                                 </div>
                                 <div class="text-uppercase d-flex flex-column align-items-end">
                                     <p class="mb-2">bangladesh</p>
                                     <p class="mb-2">dhaka</p>
-                                    <p class="mb-2">24</p>
+                                    <p class="mb-0">24</p>
                                 </div>
                             </div>
                             <div class="my-3 divider"></div>
@@ -189,131 +192,116 @@
                             </div>
                         </div>
                     </article>
+                </div>
 
-                    <!-- Counter -->
+                <!-- Counter -->
+                <div class="row">
                     <article class="col-12 col-md-8 offset-md-4" data-scroll-section>
-                        <div class="ms-md-5 ms-lg-4 rounded-3 counter_box"
-                            style="background-color: #00283a; padding: 20px;" data-scroll>
-                            <h1>Counter</h1>
-                            <p>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore iure odio
-                                blanditiis
-                            </p>
+                        <div class="ms-md-4 text-uppercase text-center fw-semibold counter_box" data-scroll>
+                            <div class="row">
+                                <div class="col-md-4 mb-3 mb-md-0">
+                                    <div class="content_box p-5 rounded-3">
+                                        <div>
+                                            <p class="mb-0 counter_digits">50<span>+</span></p>
+                                        </div>
+                                        <div class="my-4 divider"></div>
+                                        <div>
+                                            <p class="mb-0">completed</p>
+                                            <span>projects</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3 mb-md-0">
+                                    <div class="content_box p-5 rounded-3">
+                                        <div>
+                                            <p class="mb-0 counter_digits">30<span>+</span></p>
+                                        </div>
+                                        <div class="my-4 divider"></div>
+                                        <div>
+                                            <p class="mb-0">happy</p>
+                                            <span>customers</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3 mb-md-0">
+                                    <div class="content_box p-5 rounded-3">
+                                        <div>
+                                            <p class="mb-0 counter_digits">10<span>+</span></p>
+                                        </div>
+                                        <div class="my-4 divider"></div>
+                                        <div>
+                                            <p class="mb-0">honors and</p>
+                                            <span>rewards</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </article>
+                </div>
 
-                    <!-- Story -->
+                <!-- Story -->
+                <div class="row">
                     <article class="col-12 col-md-8 offset-md-4" data-scroll-section>
-                        <div class="ms-md-5 ms-lg-4 rounded-3 mt-2" style="background-color: #00283a; padding: 20px;"
-                            data-scroll>
-                            <h1>Story</h1>
-                            <p>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore iure odio
-                                blanditiis
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis modi saepe similique
-                                quidem quibusdam id? Consequuntur quas perferendis hic velit ab maiores et soluta,
-                                quos
-                                blanditiis enim, dolores, maxime distinctio omnis eligendi qui itaque facilis animi
-                                odit
-                                assumenda inventore autem voluptas delectus! Molestiae suscipit neque quas eligendi
-                                non
-                                temporibus beatae corrupti aperiam, commodi velit labore. Doloribus, exercitationem
-                                repellat ad sequi laborum odio ipsum culpa ipsa consequuntur quam aperiam mollitia
-                                blanditiis magnam commodi unde asperiores totam voluptatibus temporibus. Distinctio
-                                quisquam eligendi harum modi fugit magnam dolorum sit laborum error aspernatur nisi
-                                voluptas, quibusdam soluta assumenda voluptates laudantium voluptatem id. Molestiae
-                                illum voluptas reprehenderit amet labore cum hic adipisci veritatis earum recusandae
-                                nulla error dolore provident sit quis, magnam exercitationem explicabo est
-                                voluptatem ex
-                                nisi optio tempore veniam. Illum vitae perferendis voluptates quam debitis nihil
-                                cupiditate optio dicta enim, ipsum repellat at temporibus facilis nesciunt itaque
-                                consequuntur quod officia, quo nobis modi alias aliquid quia totam repellendus.
-                                Natus
-                                asperiores harum amet et nisi, placeat repudiandae non totam aspernatur beatae eius
-                                quidem laudantium cumque, adipisci magni architecto eligendi aperiam odit quo. Animi
-                                quidem possimus error ab doloremque perspiciatis ratione blanditiis neque deleniti!
-                                Nemo, qui. Reprehenderit impedit illo dicta, error porro corrupti explicabo non.
+                        <div class="ms-md-4 rounded-3 mt-2" data-scroll>
+
+                            <!-- Content Divider -->
+                            <p class="content_divider d-flex align-items-center my-3 my-md-5">My Story
+                                <span class="position-relative mx-3 divider_number" data-number="01">
+                                </span>
                             </p>
+
+                            <div class="content_box">
+                                <p>
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore iure odio
+                                    blanditiis
+
+                                </p>
+                            </div>
                         </div>
                     </article>
+                </div>
 
-                    <!-- Service -->
+                <!-- Service -->
+                <div class="row">
                     <article class="col-12 col-md-8 offset-md-4" data-scroll-section>
-                        <div class="ms-md-5 ms-lg-4" data-scroll>
-                            <h1>Service</h1>
-                            <p>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore iure odio
-                                blanditiis
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis earum eaque voluptas,
-                                eveniet doloribus omnis a dignissimos aspernatur, repellat id cupiditate, hic optio?
-                                Earum incidunt ratione laudantium explicabo! Molestiae sit debitis asperiores
-                                aspernatur
-                                fuga officia temporibus, maiores inventore excepturi atque corporis, vero rem
-                                possimus
-                                voluptates praesentium itaque voluptatem repellat numquam! Cumque, dolorem nostrum?
-                                Pariatur eveniet nihil, modi debitis, harum aliquam in suscipit id non delectus
-                                quisquam
-                                facilis odio commodi nam laborum ad, explicabo itaque natus quasi iure vero. Totam,
-                                inventore illum, officiis, magnam eligendi placeat nihil numquam sed corporis omnis
-                                officia. Atque est eligendi porro officiis sunt eum. Suscipit velit dignissimos
-                                magni
-                                laboriosam animi. Molestias ratione temporibus maxime tempora totam vero
-                                exercitationem,
-                                placeat minima aspernatur nam tempore magni dolorum iste accusamus voluptate quos
-                                quo
-                                obcaecati voluptatem cumque vitae nihil corrupti repellat et! Tenetur cupiditate
-                                labore
-                                asperiores, ut nihil tempore maiores culpa natus odio laborum numquam unde
-                                repellendus
-                                assumenda pariatur nesciunt ipsam consequuntur, facilis laudantium, debitis
-                                aspernatur.
-                                Consequatur eligendi aliquam nesciunt placeat molestias? Tenetur dignissimos
-                                nesciunt
-                                officiis et atque exercitationem sunt incidunt, minima libero molestias modi alias
-                                provident consectetur, quis quae totam ex neque numquam! Cupiditate quidem
-                                reprehenderit
-                                eaque omnis aperiam! Consequatur laboriosam et consequuntur voluptatum laborum
-                                voluptate
-                                cum repudiandae iste.
+                        <div class="ms-md-4" data-scroll>
+
+                            <!-- Content Divider -->
+                            <p class="content_divider d-flex align-items-center my-3 my-md-5">My Services
+                                <span class="position-relative mx-3 divider_number" data-number="02">
+                                </span>
                             </p>
+
+                            <div class="content_box">
+                                <h1>Service</h1>
+                                <p>
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore iure odio
+                                    blanditiis
+                                </p>
+                            </div>
                         </div>
                     </article>
+                </div>
 
-                    <!-- Testimonial -->
+                <!-- Testimonial -->
+                <div class="row">
                     <article class="col-12 col-md-8 offset-md-4" data-scroll-section>
-                        <div class="ms-md-5 ms-lg-4" data-scroll>
-                            <h1>Testimonial</h1>
-                            <p>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore iure odio
-                                blanditiis
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro impedit vitae
-                                voluptates
-                                asperiores tenetur deserunt ab unde quo ad reiciendis aspernatur repudiandae ipsum
-                                doloribus, repellat eum facere. Autem commodi odio quasi quam, unde saepe veritatis
-                                error cupiditate non. Sequi consectetur qui necessitatibus, mollitia eaque incidunt
-                                nulla neque iste aut, illum accusamus, a numquam obcaecati eveniet esse ab ipsum
-                                sunt ex
-                                dolor dolores. Asperiores alias iste repudiandae doloremque quia, autem beatae
-                                corporis
-                                excepturi? Rerum doloremque nostrum id hic suscipit ut veritatis obcaecati placeat
-                                nam
-                                consectetur cum, eius voluptatem exercitationem quibusdam. Ipsum, nisi nihil cum
-                                veniam
-                                hic nesciunt animi! Omnis quos velit quae earum modi quia ipsa itaque, cupiditate
-                                dignissimos voluptas quas nesciunt tempora eveniet praesentium, labore unde nobis
-                                maxime
-                                maiores ut sed quam. Consequatur officia iure, alias quod quaerat qui!
-                                Necessitatibus
-                                adipisci, eveniet porro molestias blanditiis numquam reprehenderit quaerat vero
-                                animi?
-                                Voluptas reiciendis harum eaque magni expedita necessitatibus aperiam autem ratione
-                                quia, cupiditate asperiores repellendus pariatur consectetur doloribus odit?
-                                Accusantium
-                                tenetur obcaecati laborum culpa recusandae aliquid eaque! Recusandae accusamus odit
-                                doloribus, quia commodi illum fugit incidunt illo totam quae sed neque nobis sequi
-                                voluptatum fuga. Nam exercitationem minus nemo, deleniti, consequatur soluta dolor,
-                                necessitatibus nisi delectus ducimus repudiandae quam modi in!
+                        <div class="ms-md-4" data-scroll>
+
+                            <!-- Content Divider -->
+                            <p class="content_divider d-flex align-items-center my-3 my-md-5">Testimonial
+                                <span class="position-relative mx-3 divider_number" data-number="03">
+                                </span>
                             </p>
+
+                            <div class="content_box">
+                                <h1>Testimonial</h1>
+                                <p>
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore iure odio
+                                    blanditiis
+                                </p>
+                            </div>
                         </div>
                     </article>
                 </div>
@@ -341,7 +329,6 @@
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/locomotive-scroll.min.js"></script>
     <script src="./assets/js/autotyping.min.js"></script>
-    <script src="./assets/js/swiper-bundle.min.js"></script>
     <script src="./assets/js/main.js"></script>
 </body>
 
