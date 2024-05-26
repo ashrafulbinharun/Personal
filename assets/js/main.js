@@ -18,8 +18,24 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // slider
-var swiper = new Swiper(".testimonial", {
+const swiper = new Swiper('.testimonial_slider', {
+    // Optional parameters
     slidesPerView: 1,
     direction: 'horizontal',
     loop: true,
+
+    // keyboard control
+    keyboard: {
+        enabled: true,
+    },
+
+    // parallax
+    speed: 800,
+    parallax: true,
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
 });

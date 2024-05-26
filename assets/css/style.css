@@ -144,7 +144,7 @@ textarea:not([rows]) {
   --text_secondary: rgba(204, 205, 207, 0.7);
   --shadow: 0 2px 4px 0 rgb(0 0 0 / 60%);
   --word_space: 0.125rem;
-  --duration: all 0.3s ease-in-out;
+  --duration: all 0.4s ease-in-out;
 }
 
 /* Mobile Design */
@@ -181,6 +181,38 @@ h6 {
 .swiper {
   width: 100%;
   height: 100%;
+}
+.swiper_nav {
+  top: -165px;
+  opacity: 0;
+  transition: var(--duration);
+}
+.custom_prev,
+.custom_next {
+  background-color: var(--secondary);
+  color: var(--text_primary);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  text-align: center;
+}
+.custom_prev {
+  margin-left: 5rem;
+  transition: var(--duration);
+}
+.custom_next {
+  margin-right: 5rem;
+  transition: var(--duration);
+}
+.custom_prev::after {
+  content: '\f060';
+  font-family: 'FontAwesome';
+  font-size: 1rem;
+}
+.custom_next::after {
+  content: '\f061';
+  font-family: 'FontAwesome';
+  font-size: 1rem;
 }
 
 .content_box {
@@ -221,7 +253,7 @@ h6 {
 }
 .my-btn:focus {
   color: var(--text_primary);
-  outline: 2px solid var(--secondary);
+  outline: 0.125rem solid var(--secondary);
   outline-offset: 3px;
 }
 .fa-arrow-down {
@@ -295,13 +327,15 @@ h6 {
 }
 .avatar {
   max-width: 150px;
+  border: 0.125rem solid var(--bg);
+  box-shadow: var(--shadow);
 }
 .title {
   font-size: 1rem;
   font-weight: 700;
 }
 .divider {
-  border-bottom: dotted 2px rgba(225, 225, 235, 0.25);
+  border-bottom: dotted 0.125rem rgba(225, 225, 235, 0.25);
 }
 .auto_type {
   font-size: 0.875rem;
@@ -336,7 +370,7 @@ h6 {
 .divider_number {
   height: 1px;
   width: 100%;
-  border-bottom: dotted 2px rgba(225, 225, 235, 0.25);
+  border-bottom: dotted 0.125rem rgba(225, 225, 235, 0.25);
 }
 .divider_number::after {
   content: attr(data-number);
@@ -388,6 +422,20 @@ h6 {
   font-size: 0.875rem;
   margin-top: 3px;
   margin-left: 3px;
+}
+
+/* Testimonial */
+.client_image {
+  max-width: 75px;
+  border: 0.125rem solid var(--bg);
+  box-shadow: var(--shadow);
+}
+.client_name {
+  font-size: 1.125rem;
+  color: var(--secondary);
+}
+.client_review {
+  color: var(--text_secondary);
 }
 
 /* Footer */
@@ -510,6 +558,17 @@ h6 {
   .fa-quote-right {
     bottom: 5%;
     right: 5%;
+  }
+
+  /* Testimonial */
+  .testimonial_slider:hover .custom_next {
+    margin-right: 0;
+  }
+  .testimonial_slider:hover .custom_prev {
+    margin-left: 0;
+  }
+  .testimonial_slider:hover .swiper_nav {
+    opacity: 1;
   }
 
   /* Footer */
