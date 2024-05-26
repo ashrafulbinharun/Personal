@@ -369,6 +369,27 @@ h6 {
   right: 8%;
 }
 
+/* Service */
+.service_icons {
+  font-size: 2.25rem;
+  color: var(--text_secondary);
+}
+.service_title {
+  font-size: 1.25rem;
+}
+.service_text {
+  font-size: 1rem;
+  color: var(--text_secondary);
+}
+.service_link {
+  color: var(--secondary);
+}
+.service_link i {
+  font-size: 0.875rem;
+  margin-top: 3px;
+  margin-left: 3px;
+}
+
 /* Footer */
 .footer {
   background-color: var(--bg);
