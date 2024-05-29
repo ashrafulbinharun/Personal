@@ -494,6 +494,62 @@ h6 {
   text-align: center;
 }
 
+/* =====================
+      About Page
+======================== */
+/* Skills */
+.progress {
+  height: 5px;
+  background-color: var(--text_primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+.percent {
+  background: var(--secondary);
+  transform-origin: left;
+  animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+.html {
+  width: 90%;
+}
+.css {
+  width: 80%;
+}
+.php {
+  width: 70%;
+}
+.js {
+  width: 60%;
+}
+.sql {
+  width: 70%;
+}
+.laravel {
+  width: 80%;
+}
+
+/* Knowledge */
+.knowledge_order {
+  list-style-position: inside;
+  list-style-type: none;
+}
+.knowledge_list::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 0;
+  height: 10px;
+  width: 10px;
+  border: solid 3px #afb42b;
+  border-radius: 50%;
+}
+
 /* Footer */
 .footer {
   background-color: var(--bg);
