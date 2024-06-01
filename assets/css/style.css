@@ -332,6 +332,9 @@ body {
 .content {
   margin-top: -3rem;
 }
+.right_side {
+  margin-top: 38rem;
+}
 
 /* Profile */
 .profile {
@@ -373,9 +376,6 @@ body {
       Home Page
 =================== */
 /* Counter */
-.counter_box {
-  margin-top: 38rem;
-}
 .counter_digits {
   font-size: 1.5rem;
 }
@@ -456,47 +456,49 @@ body {
 }
 
 /* =====================
-      Contact Page
+      Project Page
 ======================== */
-/* Contact Info */
-.info_icon {
-  font-size: 3rem;
-  margin-bottom: 2rem;
-  color: var(--text_secondary);
-}
-.info_title {
+.filter_title {
   font-size: 1.25rem;
-  margin-bottom: 1.25rem;
 }
-.info_link,
-.info_link a {
-  color: var(--text_secondary);
+.filter_list {
+  list-style-type: none;
 }
-
-/* Contact Form */
-.my_input,
-.my_input:focus {
-  background-color: var(--primary);
-  color: var(--text_primary);
-  border: none;
-  height: 3rem;
-  box-shadow: inset 0 0 4px -1px rgb(0 0 0 / 60%);
-}
-.my_input:focus {
-  box-shadow: none;
-}
-.my_input::placeholder {
-  color: var(--text_primary);
-  text-transform: capitalize;
-}
-.form_btn {
-  font-size: 1.125rem;
-  width: 40%;
-}
-.form_text {
+.filter_title {
   font-size: 0.875rem;
-  color: var(--text_secondary);
-  text-align: center;
+  transition: var(--duration);
+}
+.filter_title:hover {
+  background-color: var(--secondary);
+  cursor: pointer;
+}
+.filter_active {
+  background-color: var(--primary);
+}
+.project_image {
+  transition: var(--duration);
+}
+.project_title {
+  font-size: 1.125rem;
+}
+.project_hover {
+  background-color: var(--bg);
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: var(--duration);
+}
+.project_link {
+  background-color: var(--secondary);
+  color: var(--text_primary);
+  width: 2.25rem;
+  height: 2.25rem;
+}
+.project_box:hover .project_hover {
+  opacity: 1;
+}
+.project_box:hover .project_image {
+  transform: scale(1.1);
 }
 
 /* =====================
@@ -520,28 +522,27 @@ body {
     transform: scaleX(1);
   }
 }
-.html {
+.skill_1 {
   width: 90%;
 }
-.css {
+.skill_2 {
   width: 80%;
 }
-.php {
+.skill_3 {
   width: 70%;
 }
-.js {
+.skill_4 {
   width: 60%;
 }
-.sql {
+.skill_5 {
   width: 70%;
 }
-.laravel {
+.skill_6 {
   width: 80%;
 }
 
 /* Knowledge */
 .knowledge_order {
-  list-style-position: inside;
   list-style-type: none;
 }
 .knowledge_list::before {
@@ -647,6 +648,50 @@ body {
   outline-offset: 0.125rem;
 }
 
+/* =====================
+      Contact Page
+======================== */
+/* Contact Info */
+.info_icon {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: var(--text_secondary);
+}
+.info_title {
+  font-size: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+.info_link,
+.info_link a {
+  color: var(--text_secondary);
+}
+
+/* Contact Form */
+.my_input,
+.my_input:focus {
+  background-color: var(--primary);
+  color: var(--text_primary);
+  border: none;
+  height: 3rem;
+  box-shadow: inset 0 0 4px -1px rgb(0 0 0 / 60%);
+}
+.my_input:focus {
+  box-shadow: none;
+}
+.my_input::placeholder {
+  color: var(--text_primary);
+  text-transform: capitalize;
+}
+.form_btn {
+  font-size: 1.125rem;
+  width: 40%;
+}
+.form_text {
+  font-size: 0.875rem;
+  color: var(--text_secondary);
+  text-align: center;
+}
+
 /* Footer */
 .footer {
   background-color: var(--bg);
@@ -712,6 +757,11 @@ body {
     right: 7%;
   }
 
+  /* Project */
+  .filter_items {
+    font-size: 1rem;
+  }
+
   /* Education */
   .wrapper_box {
     gap: 2.5rem;
@@ -751,6 +801,11 @@ body {
     display: none;
   }
 
+  /* General */
+  .right_side {
+    margin-top: 0;
+  }
+
   /* Banner Section */
   .banner_title {
     font-size: 4rem;
@@ -765,11 +820,6 @@ body {
     top: 12.5%;
     max-width: 400px;
     height: calc(100vh - 100px);
-  }
-
-  /* Counter */
-  .counter_box {
-    margin-top: 0;
   }
 
   /* Story */

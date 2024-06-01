@@ -33,8 +33,8 @@
     <link rel="stylesheet" href="./assets/fontawesome_icons/all.css">
     <!-- locomotive scroll -->
     <link rel="stylesheet" href="./assets/css/locomotive-scroll.css">
-    <!-- swiper js -->
-    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
+    <!-- fancybox -->
+    <link rel="stylesheet" href="./assets/css/fancybox.css">
     <!-- custom css -->
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
@@ -194,41 +194,113 @@
                 <!-- Projects -->
                 <div class="row">
                     <article class="col-12 col-md-8 offset-md-4" data-scroll-section>
-                        <div class="ms-md-4 text-uppercase text-center fw-semibold counter_box" data-scroll>
-                            <div class="row">
-                                <div class="col-md-4 mb-3 mb-md-0">
-                                    <div class="content_box p-5 rounded-3">
-                                        <div>
-                                            <p class="mb-0 counter_digits">50<span>+</span></p>
-                                        </div>
-                                        <div class="my-4 divider"></div>
-                                        <div>
-                                            <p class="mb-0">completed</p>
-                                            <span>projects</span>
+                        <div class="ms-md-4 right_side" data-scroll>
+                            <div class="content_box p-4 rounded-3 mb-3 fw-semibold text-center">
+                                <p class="d-md-none mb-2 filter_title">Filters</p>
+                                <ul
+                                    class="p-0 m-0 filter_list d-flex flex-column flex-md-row justify-content-evenly align-items-center gap-2 gap-md-0 filter_group">
+                                    <li data-filter=".bootstrap"
+                                        class="text-capitalize filter_title px-4 py-2 rounded-3 filter_active">
+                                        bootstrap
+                                    </li>
+                                    <li data-filter=".laravel" class="text-capitalize filter_title px-4 py-2 rounded-3">
+                                        laravel
+                                    </li>
+                                    <li data-filter=".tailwind"
+                                        class="text-capitalize filter_title px-4 py-2 rounded-3">
+                                        tailwind
+                                    </li>
+                                    <li data-filter=".email" class="text-capitalize filter_title px-4 py-2 rounded-3">
+                                        email
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="row filter">
+                                <div class="col-md-6 mb-3 mb-md-4 filter_items bootstrap">
+                                    <div class="content_box rounded-3 overflow-hidden project_box position-relative">
+                                        <img class="project_image" src="./assets/images/yumy.jpg"
+                                            alt="Project Thumbnail Image">
+                                        <div class="project_hover position-absolute w-100 px-4 py-3 rounded-bottom-3">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <h2 class="m-0 project_title fw-semibold text-capitalize">title</h2>
+                                                <div class="d-flex justify-content-between align-items-center gap-3">
+                                                    <a href="./assets/images/yumy.jpg" data-fancybox="gallery"
+                                                        data-slug="project"
+                                                        class="project_link d-flex justify-content-center align-items-center rounded-circle">
+                                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                                    </a>
+                                                    <a href="#"
+                                                        class="project_link d-flex justify-content-center align-items-center rounded-circle">
+                                                        <i class=" fa-solid fa-arrow-up-right-from-square"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-4 mb-3 mb-md-0">
-                                    <div class="content_box p-5 rounded-3">
-                                        <div>
-                                            <p class="mb-0 counter_digits">30<span>+</span></p>
-                                        </div>
-                                        <div class="my-4 divider"></div>
-                                        <div>
-                                            <p class="mb-0">happy</p>
-                                            <span>customers</span>
+                                <div class="col-md-6 mb-3 mb-md-4 filter_items bootstrap">
+                                    <div class="content_box rounded-3 overflow-hidden project_box position-relative">
+                                        <img class="project_image" src="./assets/images/furnio.jpg"
+                                            alt="Project Thumbnail Image">
+                                        <div class="project_hover position-absolute w-100 px-4 py-3 rounded-bottom-3">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <h2 class="m-0 project_title fw-semibold text-capitalize">title</h2>
+                                                <div class="d-flex justify-content-between align-items-center gap-3">
+                                                    <a href="./assets/images/furnio.jpg" data-fancybox="gallery"
+                                                        data-slug="project"
+                                                        class="project_link d-flex justify-content-center align-items-center rounded-circle">
+                                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                                    </a>
+                                                    <a href="#"
+                                                        class="project_link d-flex justify-content-center align-items-center rounded-circle">
+                                                        <i class=" fa-solid fa-arrow-up-right-from-square"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-4 mb-3 mb-md-0">
-                                    <div class="content_box p-5 rounded-3">
-                                        <div>
-                                            <p class="mb-0 counter_digits">10<span>+</span></p>
+                                <div class="col-md-6 mb-3 mb-md-4 filter_items laravel">
+                                    <div class="content_box rounded-3 overflow-hidden project_box position-relative">
+                                        <img class="project_image" src="./assets/images/yumy.jpg"
+                                            alt="Project Thumbnail Image">
+                                        <div class="project_hover position-absolute w-100 px-4 py-3 rounded-bottom-3">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <h2 class="m-0 project_title fw-semibold text-capitalize">title</h2>
+                                                <div class="d-flex justify-content-between align-items-center gap-3">
+                                                    <a href="./assets/images/yumy.jpg" data-fancybox="gallery"
+                                                        data-slug="project"
+                                                        class="project_link d-flex justify-content-center align-items-center rounded-circle">
+                                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                                    </a>
+                                                    <a href="#"
+                                                        class="project_link d-flex justify-content-center align-items-center rounded-circle">
+                                                        <i class=" fa-solid fa-arrow-up-right-from-square"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="my-4 divider"></div>
-                                        <div>
-                                            <p class="mb-0">honors and</p>
-                                            <span>rewards</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3 mb-md-4 filter_items email">
+                                    <div class="content_box rounded-3 overflow-hidden project_box position-relative">
+                                        <img class="project_image" src="./assets/images/furnio.jpg"
+                                            alt="Project Thumbnail Image">
+                                        <div class="project_hover position-absolute w-100 px-4 py-3 rounded-bottom-3">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <h2 class="m-0 project_title fw-semibold text-capitalize">title</h2>
+                                                <div class="d-flex justify-content-between align-items-center gap-3">
+                                                    <a href="./assets/images/furnio.jpg" data-fancybox="gallery"
+                                                        data-slug="project"
+                                                        class="project_link d-flex justify-content-center align-items-center rounded-circle">
+                                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                                    </a>
+                                                    <a href="#"
+                                                        class="project_link d-flex justify-content-center align-items-center rounded-circle">
+                                                        <i class=" fa-solid fa-arrow-up-right-from-square"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -260,7 +332,40 @@
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/locomotive-scroll.min.js"></script>
     <script src="./assets/js/autotyping.min.js"></script>
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/isotope.min.js"></script>
+    <script src="./assets/js/fancybox.js"></script>
     <script src="./assets/js/main.js"></script>
+    <script type="text/javascript">
+        // filter
+        var $filter = $('.filter').isotope();
+        $('.filter_group').on('click', 'li', function () {
+            $(this).addClass('filter_active').siblings().removeClass('filter_active');
+            var filterValue = $(this).attr('data-filter');
+            $filter.isotope({ filter: filterValue });
+        });
+
+        // lightbox
+        Fancybox.bind('[data-fancybox="gallery"]', {
+            Hash: true,
+            Thumbs: {
+                type: "modern",
+            },
+            Carousel: {
+                transition: "fade",
+                infinite: true,
+            },
+            Thumbnails: {
+                showOnStart: false
+            },
+            Images: {
+                protected: true
+            },
+            Slideshow: {
+                timeout: 2000
+            }
+        });
+    </script>
 </body>
 
 </html>
