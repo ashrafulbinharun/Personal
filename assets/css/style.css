@@ -1,141 +1,7 @@
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Sofia+Sans+Semi+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap');
-
 /* Normalizer */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  -moz-text-size-adjust: none;
-  -webkit-text-size-adjust: none;
-  text-size-adjust: none;
-}
-
-body {
-  line-height: 1.5;
-}
-
-img,
-svg,
-video,
-canvas,
-audio,
-iframe,
-embed,
-object {
-  display: block;
-  max-width: 100%;
-}
-
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
-}
-
-/* Remove built-in form typography styles */
-:where(input, button, textarea, select),
-:where(input[type='file'])::-webkit-file-upload-button {
-  color: inherit;
-  font: inherit;
-  font-size: inherit;
-  letter-spacing: inherit;
-  word-spacing: inherit;
-}
-
-a {
-  text-decoration: none;
-}
-
-/* Make it clear that interactive elements are interactive */
-:where(
-    a[href],
-    area,
-    button,
-    input,
-    label[for],
-    select,
-    summary,
-    textarea,
-    [tabindex]:not([tabindex*='-'])
-  ) {
-  cursor: pointer;
-  touch-action: manipulation;
-}
-:where(input[type='file']) {
-  cursor: auto;
-}
-:where(input[type='file'])::-webkit-file-upload-button,
-:where(input[type='file'])::file-selector-button {
-  cursor: pointer;
-}
-
-/* Textareas without a rows attribute are not tiny */
-textarea:not([rows]) {
-  min-height: 10em;
-}
-
-/* Position list marker inside */
-:where(ul, ol) {
-  list-style-position: inside;
-}
-
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-:where(ul, ol)[role='list'] {
-  list-style: none;
-}
-
-/* Make sure users can't select button text */
-:where(
-    button,
-    button[type],
-    input[type='button'],
-    input[type='submit'],
-    input[type='reset']
-  ),
-:where(input[type='file'])::-webkit-file-upload-button,
-:where(input[type='file'])::file-selector-button {
-  -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
-  user-select: none;
-  text-align: center;
-}
-
-/* Disabled cursor for disabled buttons */
-:where(
-    button,
-    button[type],
-    input[type='button'],
-    input[type='submit'],
-    input[type='reset']
-  )[disabled] {
-  cursor: not-allowed;
-}
-
-:where(svg) {
-  stroke: none;
-  fill: currentColor;
-}
-
-/* SVG's without a fill attribute */
-:where(svg):where(:not([fill])) {
-  /* Remove fill and set stroke color to the inherited font color */
-  stroke: currentColor;
-  fill: none;
-  /* Rounded stroke */
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
+@import url('./normalizer.css');
 :root {
   --bg: #00283a;
   --primary: #02162b;
@@ -146,7 +12,6 @@ textarea:not([rows]) {
   --word_space: 0.125rem;
   --duration: all 0.4s ease-in-out;
 }
-
 /* =====================
       General Styles
 ======================== */
@@ -164,15 +29,34 @@ h5,
 h6 {
   font-family: 'Lato', sans-serif;
 }
-
+html,
+body {
+  overflow-x: hidden;
+}
 .content_box {
   background-color: var(--bg);
   box-shadow: var(--shadow);
 }
-
-html,
-body {
-  overflow-x: hidden;
+/* Content Divider */
+.content_divider {
+  font-weight: 700;
+  font-size: 1.375rem;
+  white-space: nowrap;
+}
+.divider_number {
+  height: 1px;
+  border-bottom: dotted 0.125rem rgba(225, 225, 235, 0.25);
+}
+.divider_number::after {
+  content: attr(data-number);
+  position: absolute;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--text_secondary);
+  opacity: 0.8;
+  top: -0.375rem;
+  right: -1.375rem;
 }
 /* Locomotive Scroll */
 .c-scrollbar {
@@ -189,7 +73,6 @@ body {
   background-color: var(--secondary);
   opacity: 1;
 }
-
 /* Swiper */
 .swiper {
   width: 100%;
@@ -227,7 +110,6 @@ body {
   font-family: 'FontAwesome';
   font-size: 1rem;
 }
-
 /* Header & Navigation Menu */
 .menu {
   color: var(--text_primary);
@@ -282,7 +164,6 @@ body {
   top: 0;
   left: 30%;
 }
-
 /* Banner Section */
 .banner_image {
   margin-top: 3.6rem;
@@ -327,7 +208,6 @@ body {
 .banner_button:hover::before {
   left: 0;
 }
-
 /* Main Tag Elements */
 .content {
   margin-top: -3rem;
@@ -335,7 +215,6 @@ body {
 .right_side {
   margin-top: 38rem;
 }
-
 /* Profile */
 .profile {
   position: absolute;
@@ -371,7 +250,6 @@ body {
 .profile_info {
   font-size: 0.875rem;
 }
-
 /* ================
       Home Page
 =================== */
@@ -379,30 +257,9 @@ body {
 .counter_digits {
   font-size: 1.5rem;
 }
-
-/* Content Divider */
-.content_divider {
-  font-weight: 700;
-  font-size: 1.375rem;
-  white-space: nowrap;
+.counter_digits span {
+  color: var(--secondary);
 }
-.divider_number {
-  height: 1px;
-  width: 100%;
-  border-bottom: dotted 0.125rem rgba(225, 225, 235, 0.25);
-}
-.divider_number::after {
-  content: attr(data-number);
-  position: absolute;
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-align: center;
-  color: var(--text_secondary);
-  opacity: 0.8;
-  top: -0.375rem;
-  right: -1.375rem;
-}
-
 /* Story */
 .description {
   font-size: 1.125rem;
@@ -421,7 +278,6 @@ body {
   bottom: 3%;
   right: 8%;
 }
-
 /* Service */
 .service_icons {
   font-size: 2.25rem;
@@ -440,7 +296,6 @@ body {
 .service_link i {
   font-size: 0.875rem;
 }
-
 /* Testimonial */
 .client_image {
   max-width: 75px;
@@ -454,7 +309,6 @@ body {
 .client_review {
   color: var(--text_secondary);
 }
-
 /* =====================
       Project Page
 ======================== */
@@ -500,7 +354,6 @@ body {
 .project_box:hover .project_image {
   transform: scale(1.1);
 }
-
 /* =====================
       About Page
 ======================== */
@@ -540,7 +393,6 @@ body {
 .skill_6 {
   width: 80%;
 }
-
 /* Knowledge */
 .knowledge_order {
   list-style-type: none;
@@ -555,11 +407,9 @@ body {
   border: solid 0.1875rem #afb42b;
   border-radius: 50%;
 }
-
 /* Education */
 .wrapper_box {
-  gap: 2rem;
-  margin-bottom: 2rem;
+  gap: 1rem;
 }
 .wrapper_box::after {
   content: '';
@@ -647,7 +497,6 @@ body {
   outline: 0.125rem solid var(--secondary);
   outline-offset: 0.125rem;
 }
-
 /* =====================
       Contact Page
 ======================== */
@@ -665,7 +514,6 @@ body {
 .info_link a {
   color: var(--text_secondary);
 }
-
 /* Contact Form */
 .my_input,
 .my_input:focus {
@@ -691,7 +539,6 @@ body {
   color: var(--text_secondary);
   text-align: center;
 }
-
 /* Footer */
 .footer {
   background-color: var(--bg);
@@ -702,7 +549,6 @@ body {
 .footer-link {
   color: var(--secondary);
 }
-
 /* Tablet Design */
 @media (min-width: 640px) {
   /* Locomotive Scroll */
@@ -721,7 +567,6 @@ body {
   .mobile-menu {
     left: 40%;
   }
-
   /* Banner Section */
   .banner_image {
     max-height: 80dvh;
@@ -735,7 +580,6 @@ body {
   .content {
     margin-top: -6rem;
   }
-
   /* Profile */
   .profile {
     max-width: 490px;
@@ -743,7 +587,6 @@ body {
   .title {
     font-size: 1.25rem;
   }
-
   /* Story */
   .description {
     font-size: 1.2rem;
@@ -756,29 +599,24 @@ body {
     bottom: 4%;
     right: 7%;
   }
-
   /* Project */
   .filter_items {
     font-size: 1rem;
   }
-
   /* Education */
   .wrapper_box {
     gap: 2.5rem;
     margin-bottom: 2.5rem;
   }
-
   /* Contact Form */
   .form_btn {
     width: 20%;
   }
-
   /* Footer */
   .footer {
     letter-spacing: 0.125rem;
   }
 }
-
 /* Desktop Design */
 @media (min-width: 1024px) {
   /* Locomotive Scroll */
@@ -800,12 +638,10 @@ body {
   .offcanvas {
     display: none;
   }
-
   /* General */
   .right_side {
     margin-top: 0;
   }
-
   /* Banner Section */
   .banner_title {
     font-size: 4rem;
@@ -814,14 +650,12 @@ body {
     padding: 0.5rem 4rem;
     font-size: 1.2rem;
   }
-
   /* Profile */
   .profile {
     top: 12.5%;
     max-width: 400px;
     height: calc(100vh - 100px);
   }
-
   /* Story */
   .fa-quote-left {
     top: 5%;
@@ -831,7 +665,6 @@ body {
     bottom: 5%;
     right: 5%;
   }
-
   /* Testimonial */
   .testimonial_slider:hover .custom_next {
     margin-right: 0;
@@ -842,12 +675,10 @@ body {
   .testimonial_slider:hover .swiper_nav {
     opacity: 1;
   }
-
   /* Education */
   .wrapper_box {
     margin-bottom: 0;
   }
-
   /* Footer */
   .footer {
     flex-direction: row;
