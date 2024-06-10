@@ -16,3 +16,11 @@ document.addEventListener("DOMContentLoaded", function() {
     });
     autoTyping.start()
 });
+
+// loader
+window.addEventListener('load', () => {
+    const loaderContainer = document.querySelector('.loader-container');
+    if (loaderContainer) {
+        loaderContainer.style.display = 'none';
+    }
+  });
